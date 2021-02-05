@@ -1,0 +1,21 @@
+<a href="#content" class="hidden">Skip to main content</a>
+<header class="header">
+    <nav aria-label="Primary navigation">
+        <input type='checkbox' name='toggleMenu' id="toggleMenu"/>
+        <a href="/" aria-label="{{ site.name }} - home" class="logo">
+            {% include "partials/logo.svg" %}
+        </a>
+        <ul role="list">
+            {% for  item in navigation.items %}
+            <li><a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a></li>
+            {% endfor %}
+        </ul>
+        <label for="toggleMenu" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <span>Menu</span>
+        </label> 
+    </nav>
+</header>

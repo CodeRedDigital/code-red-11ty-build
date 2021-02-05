@@ -2,13 +2,10 @@
 <section class="page-header {{ ph_colour }}">
     <div class="headings">
         <h1>{{ title }}</h1>
-        <h2>{{ sub_title }}</h2>
+        <p>{{ sub_title }}</p>
     </div>
 </section>
 <article>
     {{ content | safe }}
 </article>
-<section class="centered">
-    <a href="{{ home_button.buttonURL }}" class="niagara button">{{ home_button.buttonText }}</a>
-</section>
 {% endblock %}
