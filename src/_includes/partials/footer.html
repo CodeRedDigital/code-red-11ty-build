@@ -1,0 +1,19 @@
+<footer class="footer">
+    <nav class="social-icons">
+        <ul role="list">
+            {% for  item in social.items %}
+            <li><a href="{{ item.url }}" title="Code Red on {{ item.title }}">
+                <img src="{{ item.image }}">
+            </a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <p class="light">&copy; 2020 - {{ helpers.currentYear() }} Code Red Digital Ltd, trading as “Code Red”, registered in England and Wales with company number 13003055. All rights reserved.</p>
+    <nav class="secondary-nav">
+       <ul role="list">
+        {% for  item in foot_nav.items %}
+        <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+        {% endfor %}
+       </ul>
+    </nav>
+</footer>
