@@ -3,7 +3,7 @@
         <ul role="list">
             {% for  item in social.items %}
             <li><a href="{{ item.url }}" title="Code Red on {{ item.title }}">
-                <img src="{{ item.image }}">
+                {% include item.image %}
             </a></li>
             {% endfor %}
         </ul>

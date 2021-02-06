@@ -3,32 +3,32 @@
       {
         "title": "Twitter",
         "url": "https://twitter.com/CodeRedDigital",
-        "image": "images/twitter.svg"
+        "image": "partials/twitter.svg"
       },
       {
         "title": "LinkedIn",
         "url": "https://www.linkedin.com/company/codereddigital",
-        "image": "images/linkedin.svg"
+        "image": "partials/linkedin.svg"
       },
       {
         "title": "Facebook",
         "url": "https://www.facebook.com/CodeRedDigital",
-        "image": "images/facebook.svg"
+        "image": "partials/facebook.svg"
       },
       {
         "title": "Instagram",
         "url": "https://www.instagram.com/codereddigital/",
-        "image": "images/instagram.svg"
+        "image": "partials/instagram.svg"
       },
       {
         "title": "CodePen",
         "url": "https://codepen.io/CodeRedDigital",
-        "image": "images/codepen.svg"
+        "image": "partials/codepen.svg"
       },
       {
         "title": "Github",
         "url": "https://github.com/CodeRedDigital",
-        "image": "images/github.svg"
+        "image": "partials/github.svg"
       }
     ]
   }
