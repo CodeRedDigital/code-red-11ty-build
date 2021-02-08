@@ -1,10 +1,8 @@
-{% extends "layouts/base.html" %} {% block content %}
-<section class="page-header {{ ph_colour }}">
-    <div class="headings">
-        <h1>{{ title }}</h1>
-        <p>{{ sub_title }}</p>
-    </div>
-</section>
+{% extends "layouts/base.html" %} 
+{% set pageHeaderTitle = title %}
+{% set pageSubTitle = sub_title %}
+{% block content %}
+{% include "partials/page-header.html" %}
 <article>
     {{ content | safe }}
 </article>

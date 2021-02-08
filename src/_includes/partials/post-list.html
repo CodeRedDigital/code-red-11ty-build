@@ -1,0 +1,18 @@
+
+    <ul>
+        {% for item in postListItems %}
+        <li class="card">
+           <div class="image">
+              <img src="{{ item.data.image }}" alt="{{ item.data.imageAlt }}">
+           </div>
+           <div class="card-body">
+              <h2><a href="#card-link">{{ item.data.title }}</a></h2>
+              <p>{{ item.data.description }}</p>
+              <footer>
+                 <h3>Date</h3>
+                 <time date="{{ item.data.date }}">{{ item.data.date }}</time>
+              </footer>
+           </div>
+        </li>
+        {% endfor %}
+  </ul>
