@@ -8,6 +8,8 @@
 <article>
     {{ content | safe }}
 </article>
+{% include "partials/featured-posts.html" %}
+
 <section class="centered">
     <a href="{{ home_button.buttonURL }}" class="niagara button">{{ home_button.buttonText }}</a>
 </section>
