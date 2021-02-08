@@ -3,12 +3,12 @@
 <nav aria-label="Pagination links" class="pagination">
   {% if pagination.href.previous %}
   <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards"><span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span></a>
-  {% elif %}
+  {% elif not pagination.href.previous %}
   <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
   {% endif %}
   {% if pagination.href.next %}
   <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards"><span>{{ paginationNextText if paginationNextText else 'Next' }}</span></a>
-  {% elif %}
+  {% elif  not pagination.href.next%}
   <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
   {% endif %}
 </nav>
