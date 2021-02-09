@@ -1,0 +1,15 @@
+{% extends "layouts/base.html" %} 
+{% set pageHeaderTitle = title %}
+{% set pageSubTitle = sub_title %}
+{% block content %}
+{% include "partials/page-header.html" %}
+<article class="post">
+    <aside>
+        {# include toc #}
+        {# include tags #}
+    </aside>
+    <div class="post-content">
+        {{ content | safe }}
+    </div>
+</article>
+{% endblock %}
