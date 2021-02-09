@@ -7,6 +7,23 @@
     <aside>
         {# include toc #}
         {# include tags #}
+        {% if tags %}
+        <section>
+            <details>
+                <summary>Tags</summary>
+                <ul class="tags-list" aria-describedby="tags-desc">
+                    {% for tag in tags %}
+                <li>
+                  <a href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '') }}</a>
+                </li>
+              {% endfor %}
+                </ul>
+            </details>
+        </section>
+        {% endif %}
+        <section>
+            <p>This article was published on <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }} ({{ date | fromNowDateFilter }})</time>.</p>
+        </section>
     </aside>
     <div class="post-content">
         {{ content | safe }}
