@@ -1,6 +1,8 @@
 {% extends "layouts/base.html" %} 
 {% set pageHeaderTitle = title %}
 {% set pageSubTitle = sub_title %}
+{# Grab other posts that aren’t this one for the 'more from the blog' feed #}
+{% set recommendedPosts = helpers.getSiblingContent(collections.posts, page) %}
 {% block content %}
 {% include "partials/page-header.html" %}
 <article class="post">
@@ -27,6 +29,9 @@
     </aside>
     <div class="post-content">
         {{ content | safe }}
+        {% set postListItems = recommendedPosts %}
+        {% set postListHeadline = 'Other articles from the blog' %}
+        {% include "partials/post-list.html" %}
     </div>
 </article>
 {% endblock %}

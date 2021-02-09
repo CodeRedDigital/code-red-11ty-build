@@ -1,4 +1,10 @@
 
+{% if postListHeadline %}
+<h2 class="small" data-highlight="primary">
+  {{ postListHeadline }}
+</h2>
+{% endif %}
+<section class="cards" id="post-list"></section>
     <ul>
         {% for item in postListItems %}
         <li class="card">
@@ -16,3 +22,4 @@
         </li>
         {% endfor %}
   </ul>
+</section>
