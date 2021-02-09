@@ -1,4 +1,6 @@
 {
     "name": "Code Red",
-    "url": "https://code-red.uk"
+    "url": "https://code-red.uk",
+    "authorName": "Code Red",
+    "authorEmail": "hello@code-red.uk"
 }

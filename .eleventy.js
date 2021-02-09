@@ -1,3 +1,4 @@
+const rssPlugin = require('@11ty/eleventy-plugin-rss');
 // Filters
 const dateFilter = require('./src/filters/date-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
@@ -9,13 +10,15 @@ module.exports = config => {
     config.addFilter('dateFilter', dateFilter);
     config.addFilter('w3DateFilter', w3DateFilter);
     config.addFilter('fromNowDateFilter', fromNowDateFilter);
+    
     // Set directories to pass through to the dist folder
     config.addPassthroughCopy('./src/images/');
     // Returns posts items, sorted by display order
     config.addCollection('posts', collection => {
       return sortByDateOrder(collection.getFilteredByGlob('./src/posts/*.html'));
     });
-    
+    // Plugins
+    config.addPlugin(rssPlugin);
     // Returns posts items, sorted by display order then filtered by featured
     config.addCollection('featuredPosts', collection => {
       return sortByDateOrder(collection.getFilteredByGlob('./src/posts/*.html')).filter(
