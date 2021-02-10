@@ -12,10 +12,10 @@
 
 {% block content %}
 {% include "partials/page-header.html" %}
-  
+  <article>
     {% include "partials/post-list.html" %}
     {% if not tag %}
       {% include "partials/pagination.html" %}
     {% endif %}
-  
+  </article>
 {% endblock %}
