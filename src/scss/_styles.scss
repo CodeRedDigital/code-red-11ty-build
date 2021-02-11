@@ -1026,7 +1026,7 @@ summary + blockquote, summary + details, summary + dl, summary + figure:not([cla
 /* menu min size */
 
 @media screen and (min-width: 851px) {
-    #hamburger {
+    label#hamburger {
         display: none;
     }
     .header nav ul {

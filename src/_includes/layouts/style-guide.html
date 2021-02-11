@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %} 
+{% set pageHeaderTitle = title %}
+{% set pageSubTitle = sub_title %}
+{% set pageCriticalStyles = ['css/style-guide.css'] %}
+{% block content %}
+{% include "partials/page-header.html" %}
+<article>
+    {{ content | safe }}
+</article>
+{% endblock %}
