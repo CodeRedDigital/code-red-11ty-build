@@ -251,6 +251,10 @@ blockquote {
     font-family: var(--sans-serif);
     border-radius: 0 0 1.44rem 0;
     border-radius: 0 0 var(--s2) 0;
+    border-right: solid rgba(208, 2, 27, 0.9) 1px;
+    border-bottom: solid rgba(208, 2, 27, 0.9) 1px;
+    border-right: solid var(--monza-90) 1px;
+    border-bottom: solid var(--monza-90) 1px;
 }
 
 blockquote > p {
@@ -274,8 +278,8 @@ blockquote > cite {
 }
 
 blockquote > cite > a {
-    background-color: rgba(227, 222, 222, 0.9);
-    background-color: var(--bon-jour-90);
+    background-color: rgba(227, 222, 222, 0.2);
+    background-color: var(--bon-jour-20);
 }
 
 /* lists */
