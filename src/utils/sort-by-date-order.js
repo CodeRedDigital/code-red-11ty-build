@@ -6,5 +6,5 @@
  */
 module.exports = collection =>
   collection.sort((a, b) =>
-    Number(a.data.date) > Number(b.data.date) ? 1 : -1
+    Date(a.date) > Date(b.date) ? 1 : -1
   );
