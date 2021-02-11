@@ -11,7 +11,7 @@
                <p>{{ item.data.description }}</p>
                <footer>
                   <h3>Date</h3>
-                  <time date="{{ item.data.date }}">{{ item.data.date }}</time>
+                  <time date="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
                </footer>
             </div>
         </li>
