@@ -280,6 +280,8 @@ blockquote > cite {
 blockquote > cite > a {
     background-color: rgba(227, 222, 222, 0.2);
     background-color: var(--bon-jour-20);
+    font-weight: 600;
+    font-weight: var(--heavy);
 }
 
 /* lists */
