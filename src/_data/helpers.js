@@ -34,7 +34,7 @@ module.exports = {
    * @param {Boolean} random=true Wether or not this should be randomised
    * @returns {Array} The resulting collection
    */
-  getSiblingContent(collection, item, limit = 3, random = true) {
+  getSiblingContent(collection, item, limit = 2, random = true) {
     let filteredItems = collection.filter(x => x.url !== item.url);
 
     if (random) {
