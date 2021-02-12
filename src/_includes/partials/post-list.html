@@ -1,12 +1,16 @@
+{% if pagination.pageNumber == 0 %}
+{% set first = "first-page" %}
+{% endif %}
 
 {% if postListHeadline %}
 <h2 class="small" data-highlight="primary">
   {{ postListHeadline }}
 </h2>
 {% endif %}
-<section class="cards" id="post-list">
+<section class="cards {{ first }}" id="post-list">
     <ul>
         {% for item in postListItems %}
+        {% if item.data.date != "2500-01-01" %}
         <li class="card">
            <div class="image">
               <img src="{{ item.data.card.image }}" alt="{{ item.data.card.imageAlt }}">
@@ -20,6 +24,7 @@
               </footer>
            </div>
         </li>
+        {% endif %}
         {% endfor %}
   </ul>
 </section>

@@ -1,0 +1,50 @@
+---
+title: 'Future Post that will be removed'
+sub_title:
+date: '2500-01-01'
+tags: ['Future', 'Eleventy']
+description: 'If you are seeing this, this is a post that Dave wrote after time travelling to the year 2500'
+ph_colour: 'mariner'
+remove: true
+card:
+    image: '/images/posts/tardis-doctor-who.jpg'
+    imageAlt: 'Dr Whos Tardis'
+---
+<section>
+    <h2>Hello Mike, from the future</h2>
+    <p>This is not really a post from the future, but it is used to solve a problem.</p>
+</section>
+<section>
+    <h2>The Problem</h2>
+    <p>On the blog listing, I wanted to show a different number of posts on the first page (8) than the rest of the pages (9). <a href="https://www.11ty.dev/">Eleventy</a>, the Static Site Generator I used to build this site, doesn't have a nice way to do this.</p>
+</section>
+<section>
+    <h2>The solution</h2>
+    <h3>Future Post (aka this one)</h3>
+    <p>I created a post that has a future date, of 1st January 2500.</p>
+    <pre>
+---
+title: 'Future Post that will be removed'
+date: '2500-01-01'
+tags: ['Future', 'Eleventy']
+description: 'If you are seeing this, …
+---
+    </pre>
+    <h3>Filter out the future post</h3>
+    <p>In order to do this I check if the posts date is <em>not</em> 1st January 2500.</p>
+    <pre>
+&lcub;&percnt; if item.data.date != "2500-01-01" &percnt;&rcub;
+  code that I want goes here
+&lcub;&percnt; endif &percnt;&rcub;
+    </pre>
+    <h3>Set a reminder to update in 2500</h3>
+    <p>As I may want to post an article on 1st January 2500, I have set a calender reminder to fix this hack in the future.</p>
+</section>
+<section>
+    <h2>Why 'Hello Mike…'</h2>
+    <p>Well it was my good friend Mike that came up with the original idea for solving this:</p>
+    <blockquote>
+        <p>I would approach this by having a dummy entry in whatever data you're paginating, either at the start or at the end, which has a property set to say that it should not be displayed. <a href="https://twitter.com/hashtag/hack?src=hashtag_click">#hack</a> <a href="https://twitter.com/eleven_ty">@eleven_ty</a></p>
+        <cite>Quote Source <a href="https://twitter.com/PermittedSoc/status/1358798855358316545">@PermittedSoc - Twitter</a></cite>
+    </blockquote>
+</section>
