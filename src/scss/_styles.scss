@@ -121,6 +121,8 @@ article section p {
     background-color: var(--niagara-colour);
     margin-bottom: 1.44rem;
     margin-bottom: var(--s2);
+    background-size: contain;
+    background-position: center;
 }  
 
 .page-header.amber {
@@ -727,7 +729,7 @@ h6, .six {
 article section > h2,
 aside section.toc {
     top: 50px;
-    top: var(--s6);
+    top: var(--s7);
     position: sticky;
     background-color: rgba(250, 249, 249, 1);
     background-color: var(--alabaster-colour);

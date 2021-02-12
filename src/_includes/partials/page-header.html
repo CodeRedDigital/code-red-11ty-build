@@ -1,4 +1,4 @@
-<section class="page-header {{ ph_colour }}">
+<section class="page-header {{ ph_colour }}" {% if pageImage %}style="background-image: url('{{ pageImage }}');"{% endif %}>
     <div class="headings">
         <h1>{{ pageHeaderTitle }}</h1>
         {% if pageSubTitle %}
