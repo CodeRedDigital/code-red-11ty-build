@@ -743,9 +743,13 @@ aside section {
     margin-bottom: var(--s1);
 }
 
-aside ul, aside p {
+aside ul {
     padding-left: 0.83rem;
     padding-left: var(--s-1);
+}
+
+aside section p {
+    margin-left: var(--s-3);
 }
 
 summary {
