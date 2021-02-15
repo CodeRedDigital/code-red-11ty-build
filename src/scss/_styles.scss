@@ -743,6 +743,11 @@ aside section {
     margin-bottom: var(--s1);
 }
 
+aside ul, aside p {
+    padding-left: 0.83rem;
+    padding-left: var(--s-1);
+}
+
 summary {
     font-size: 1.44rem;
     font-size: var(--s1);
@@ -1020,8 +1025,8 @@ summary + blockquote, summary + details, summary + dl, summary + figure:not([cla
     }
     article section h2,
     aside section.toc {
-        top: 2.49rem;
-        top: var(--s5);
+        top: 2.99rem;
+        top: var(--s6);
     }
     article.post {
         display: grid;
