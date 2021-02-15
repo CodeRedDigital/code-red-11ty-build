@@ -104,8 +104,11 @@ article {
     max-width: 1280px;
 }
 
-article section p {
+article section {
     max-width: 70ch;
+    }
+
+article section p {
     margin: auto;
     margin-left: 2.07rem;
     margin-left: var(--s3);
@@ -255,7 +258,7 @@ blockquote {
     background-color: rgba(227, 222, 222, 0.2);
     background-color: var(--bon-jour-20);
     margin: 1rem 3.58rem;
-    margin: var(--s0) var(--s7);
+    margin: var(--s0) var(--s3);
     padding: 1.44rem;
     padding: var(--s2);
     font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -270,6 +273,7 @@ blockquote {
 
 blockquote > p {
     line-height: 1.5rem;
+    margin-left: 0;
 }
 
 blockquote > p:first-of-type::before {
