@@ -2,7 +2,7 @@
     <nav class="social-icons" aria-label="Social Links">
         <ul role="list">
             {% for  item in social.items %}
-            <li><a href="{{ item.url }}" title="Code Red on {{ item.title }}">
+            <li><a href="{{ item.url }}" title="Code Red on {{ item.title }}" rel="me">
                 {% include item.image %}
             </a></li>
             {% endfor %}
