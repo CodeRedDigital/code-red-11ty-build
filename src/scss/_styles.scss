@@ -596,33 +596,33 @@ h1, .one {
 }
 
 h2, .two {
-    font-size: 2.99rem;
-    font-size: var(--s6);
-    font-weight: 600;
-    font-weight: var(--heavy);
-}
-
-h3, .three {
-    font-size: 2.49rem;
-    font-size: var(--s5);
-    font-weight: 600;
-    font-weight: var(--heavy);
-}
-h4, .four, h2.small {
     font-size: 2.07rem;
     font-size: var(--s4);
     font-weight: 600;
     font-weight: var(--heavy);
 }
-h5, .five {
+
+h3, .three {
     font-size: 1.73rem;
     font-size: var(--s3);
     font-weight: 600;
     font-weight: var(--heavy);
 }
-h6, .six {
+h4, .four, h2.small {
     font-size: 1.44rem;
     font-size: var(--s2);
+    font-weight: 600;
+    font-weight: var(--heavy);
+}
+h5, .five {
+    font-size: 1.25rem;
+    font-size: var(--s1);
+    font-weight: 600;
+    font-weight: var(--heavy);
+}
+h6, .six {
+    font-size: 1rem;
+    font-size: var(--s0);
     font-weight: 600;
     font-weight: var(--heavy);
 }
@@ -630,6 +630,9 @@ h6, .six {
 .callout {
     font-size: 1.73rem;
     font-size: var(--s3);
+}
+
+.callout-padding {
     padding: 3.58rem;
     padding: var(--s7);
 }
