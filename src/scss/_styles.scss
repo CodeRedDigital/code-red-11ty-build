@@ -781,6 +781,10 @@ summary + blockquote, summary + details, summary + dl, summary + figure:not([cla
 }
 
 /* cards */
+.cards {
+    max-width: 1280px;
+}
+
 .cards > ul {
     list-style: none;
     padding: 0;
