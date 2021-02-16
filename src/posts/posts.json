@@ -1,5 +1,4 @@
 {
-    "layout": "layouts/posts.html",
-    "permalink": "/blog/{{ title | slug }}/index.html"
-  }
-  
+  "layout": "posts",
+  "permalink": "/blog/{{ title | slug }}/index.html"
+}

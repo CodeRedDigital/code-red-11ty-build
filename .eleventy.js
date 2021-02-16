@@ -10,11 +10,18 @@ const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 const isProduction = process.env.NODE_ENV === 'production';
 const sortByDateOrder = require('./src/utils/sort-by-date-order.js');
 module.exports = config => {
+    // Add layouts
+    config.addLayoutAlias('feed', 'feed.html');
+    config.addLayoutAlias('home', 'home.html');
+    config.addLayoutAlias('pages', 'pages.html');
+    config.addLayoutAlias('posts', 'posts.html');
+    config.addLayoutAlias('style-guide', 'style-guide.html');
+
     // Add filters
     config.addFilter('dateFilter', dateFilter);
     config.addFilter('w3DateFilter', w3DateFilter);
     config.addFilter('fromNowDateFilter', fromNowDateFilter);
-    
+
     // Set directories to pass through to the dist folder
     config.addPassthroughCopy('./src/images/');
     // Only minify HTML if we are in production because it slows builds _right_ down
@@ -41,9 +48,11 @@ module.exports = config => {
         markdownTemplateEngine: 'njk',
         dataTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
-      dir: {
-        input: 'src',
-        output: 'dist'
-      }
+        dir: {
+            input: 'src',
+            output: 'dist',
+            includes: '_includes',
+            layouts: '_includes/layouts',
+        }
     };
 };
