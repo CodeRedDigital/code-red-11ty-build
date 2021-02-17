@@ -454,6 +454,10 @@ input, textarea {
     color: var(--cod-gray-colour);
 }
 
+textarea::placeholder {
+    font-size: 0.8em;
+}
+
 input:valid:required, #valid {
     border-color: rgba(4, 118, 88, 1);
     border-color: var(--niagara-colour);
