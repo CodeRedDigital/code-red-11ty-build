@@ -1,0 +1,287 @@
+---
+title: "A11y isn’t Just…"
+link: "a11y-isnt-just"
+sub_title:
+date: "2021-02-19"
+tags: ["Accessibility", "a11y", "Screen Readers", "WCAG", "Disabilities"]
+description: "Accessibility isn't just Screen Readers, Guidelines or for the disabled"
+ph_colour: "amber"
+first_post: "https://letorey.co.uk/blog/a11y-isnt-just"
+featured: true
+card:
+  image: "/images/posts/default-post-image.jpg"
+  imageAlt: ""
+---
+
+<section><p>
+  Why a11y? A11y is a numeronym, presenting "accessibility" as "a" followed by
+  11 more letters, followed by "y".
+</p>
+</section>
+<section>
+<h2>… Screen Readers</h2>
+<p>
+  For a great many people when you talk about accessibility, they instantly
+  think about Screen Readers. While Screen Readers are an important tool for
+  those that have an impairment there are many other ways a user can be
+  affected.
+</p>
+<h3>Hearing</h3>
+<p>
+  You might think that reading a web page isn't going to affect hearing, but in
+  today's modern web has rich media including video and audio. Subtitles and
+  Captioning can help with this, I believe this should be mandatory. If
+  Subtitles or Captions are not possible or appropriate a Text Description can
+  help, this will also help with those on slow networks or less with data.
+</p>
+<h3>Visual</h3>
+<p>
+  The majority of people think that Screen Reader users are blind. This is just
+  not true, in fact the majority of blind people actually have some sight. The
+  best thing that we can do for Screen Readers are:
+</p>
+<ul>
+  <li>Use the correct <acronym title="Hyper Text Markup Language">HTML</acronym> elements</li>
+  <li>Write semantic HTML</li>
+  <li>Use <a href="https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/landmarks/index.html" title="W3C Aria Landmark Roles examples">Aria Landmark Roles</a></li>
+  <li>Use large text</li>
+  <li>Consider contrast ratios of text and background</li>
+</ul>
+<h4>Colour Blindness</h4>
+<p>
+  Colour Blindness affects about 8% of all men and 0.6% of women and comes in many different types, the 3 main ones are:
+</p>
+<ul>
+  <li>Deuteranopia (common)</li>
+  <li>Protanopia (Rare)</li>
+  <li>Tritanopia (Very Rare)</li>
+</ul>
+<p>
+  I use a tool called
+  <a href="https://colororacle.org/" title="Color Oracle App">Color Oracle</a>
+  for testing my web pages for colour blind users, you should consider looking
+  at what your site looks like for user with Colour Blindness. You can also get contrast score in the browsers dev tools.
+</p>
+<h3>Dexterity</h3>
+<p>
+  Not all of our users have the ability to use a mouse to navigate a web page,
+  some of them have fat fingers. While not actually a disability it does make it
+  difficult to hit small targets close together on touch devices.
+</p>
+<p>
+  Dexterity is about making your site easy to use for those with accuracy
+  problems. Having small buttons makes it difficult to target with a mouse,
+  especially if the elements are not laid out semantically.
+</p>
+<p>
+  At work I use a mouse as little as possible, opting for Keyboard Shortcuts and
+  tabbing through forms and I’m frequently disappointed.
+</p>
+<p>The best things we can do for users with dexterity problems are:</p>
+<ul>
+  <li>Use <code>:focus</code> styles - this is not hard and you probably already have <code>:hover</code> styles, although these may not be appropriate</li>
+  <li>Use the correct HTML elements</li>
+  <li>Write semantic HTML</li>
+  <li>Don't re-order elements with <acronym title="Cascading Style Sheets">CSS</acronym></li>
+  <li>Never mess with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" title="Mozilla Developer Network article on tabindex">tabindex</a></li>
+</ul>
+<h3>Cognitive</h3>
+<p>
+  This affects a user's ability to understand. The issue most associated with
+  this is dyslexia. Making the content easy to read and understand, without
+  using complex terms. Using sans serif fonts are easier to read, users who have
+  severe dyslexia will often override your stylesheets with their own. The
+  British Dyslexia Association has a fantastic
+  <a href="https://www.bdadyslexia.org.uk/common/ckeditor/filemanager/userfiles/About_Us/policies/Dyslexia_Style_Guide.pdf" title="BDA Style Guide">Dyslexia Style Guide (PDF)</a>.
+</p>
+</section>
+<section>
+<h2>… Guidelines</h2>
+<p>
+  There are guidelines that help us to check our sites for accessibility issues.
+  These, as the name suggest, are a guide and only following a set of predefined
+  checkpoints doesn't mean that your site is truly accessible, it means that you
+  passed those checkpoints.
+</p>
+<p>
+  Saying that, they can still be a good guide. There is a great tool called <a href="https://www.deque.com/axe/">axe</a>, that I use regularly.
+</p>
+<h3>Section508 (1194.22)</h3>
+<p>
+  While this standard covers all areas of a11y there is a section of it,
+  <a
+    href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/guide-to-the-section-508-standards/web-based-intranet-and-internet-information-and-applications-1194-22"
+    title="section508 1194.22"
+    >1194.22</a
+  >, which covers Web-based Intranet and Internet Information and Applications.
+  The rest of the standard covers areas such as:
+</p>
+<ul>
+  <li>Software Applications &amp; Operating Systems (1194.21)</li>
+  <li>Telecommunication Products (1194.23)</li>
+  <li>Video &amp; Multi-media Products (1194.24)</li>
+  <li>Self-Contained, Closed Products (1194.25)</li>
+  <li>Desktop &amp; Portable Computers (1194.26)</li>
+  <li>Functional Performance Criteria (1194.31)</li>
+  <li>Information Documentation &amp; Support (1194.41)</li>
+</ul>
+<p>
+  The bulk of 1194.22 has not been updated since 2001, a time when the web we
+  created was a very different beast. In fact, some of the recommendations I
+  looked at talk specifically about table-based layouts. This got me thinking
+  about perhaps it’s about time that the US should consider using, WCAG, the
+  same standard used by the rest of the world and recommended by W3C. Further
+  reading/research led me to discover that the United States Access Board, 18
+  January 2017, published a
+  <a
+    href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/overview-of-the-final-rule"
+    title="Overview of section508 final Rule"
+    >Final Rule</a
+  >.
+</p>
+<p>
+  The Final Rule, outlined the changes that were to be made to section508. The
+  main one, affect those who build websites and web-based applications, is
+  Incorporation of the Web Content Accessibility Guidelines (WCAG). This came
+  into effect as of 18 January 2018. This is a great leap forward for a11y in
+  the US, many of the sites that I tested last week, using HTML CodeSniffer, for
+  section508 would highlight the occasion error or warning. When testing the
+  same sites against WCAG AA, they would highlight considerably more errors or
+  warnings.
+</p>
+<h3>WCAG</h3>
+<p>
+  <a href="https://www.w3.org/WAI/intro/wcag" title="Introduction to WCAG"
+    >WCAG</a
+  >
+  is a more universal standard, created by the W3C's WAI (Web Accessibility
+  Initiative). WCAG is a standard that originates from 1999 (WCAG 1.0), the WAI
+  have just released the <a href="https://www.w3.org/TR/wcag-3.0/" title="Candidate Release for WCAG 2.1">First Public Working Draft for WCAG 3.0</a>.
+</p>
+</section><section>
+<h2>… For the disabled people</h2>
+<p>
+  Making sites accessible for those with accessibility issues is great UX and
+  make our sites better for all. The argument, "we don't have blind users on our
+  site", just does not wash. You have no idea what impairments your users have
+  or how they're interacting with your site. Google Analytics can tell us many
+  things about our users, but can't tell if they are using a screen reader,
+  keyboard, mouse, braille keyboard to interact with our sites.
+</p>
+<p>There are many times when a11y helps normal users:</p>
+<ul>
+  <li>
+    Due to my dyslexia I often get my computer to read long blog posts to me
+  </li>
+  <li>
+    With old age comes:
+    <ul>
+      <li>Dexterity Issues</li>
+      <li>Hearing Issues</li>
+      <li>Visual Issues</li>
+      <li>Cognitive Issues</li>
+    </ul>
+  </li>
+  <li>
+    When I have no headphones on public transport, captions help me watch videos
+  </li>
+  <li>Captions can also help with strong accents</li>
+  <li>
+    While drunk/intoxicated, an easy to read/simple site can aid
+    understandability
+  </li>
+  <li>
+    If a right-handed person breaks their arm and has it in a cast using a mouse
+    or touch device becomes more difficult.
+  </li>
+</ul>
+<p>
+  The <a href="https://www.microsoft.com/en-us/design/inclusive" title="Microsoft Inclusive Design">Microsoft Inclusive Design site</a>, is a fantastic resource, especially their Inclusive Toolkit Manual, for understanding Permanent, Temporary and Situational disabilities. <a href="https://www.twitter.com/ninjanails">Seren Davies</a>, added a Cognitive section to their Inclusive Toolkit Manual.
+</p>
+<figure>
+  <picture>
+    <source srcset="https://letorey.co.uk/__data/assets/image/0019/2665/varieties/Large.png" media="(min-width: 1024px)" />
+    <source srcset="https://letorey.co.uk/__data/assets/image/0019/2665/varieties/Medium.png" media="(min-width: 599px)" />
+    <img src="https://letorey.co.uk/__data/assets/image/0019/2665/varieties/Small.png" srcset="https://letorey.co.uk/__data/assets/image/0019/2665/varieties/Small.png" alt="Cognitive Users" />
+  </picture>
+<figcaption>
+  Seren Davies' addition to the Microsoft Inclusive Design Toolkit
+</figcaption>
+</figure>
+</section><section>
+<h2>Further Reading/Learning</h2>
+<p>
+  I can't recommend highly enough
+  <a href="https://twitter.com/laurakalbag" title="Laura on Twitter"
+    >Laura Kalbag's</a
+  >
+  <a
+    href="https://abookapart.com/products/accessibility-for-everyone"
+    title="Accessibility for Everyone - A book Apart"
+    >Accessibility for Everyone</a
+  >
+  in my opinion this book is a game changer and anyone who works in the web
+  industry should read this.
+</p>
+<p>
+  <a href="https://twitter.com/ninjanails" title="Seren on Twitter"
+    >Seren Davies'</a
+  >
+  talks on accessibility are fantastic:
+</p>
+<ul>
+  <li>
+    <a
+      href="https://speakerdeck.com/ninjanails/death-to-icon-fonts"
+      title="Death to Icon Fonts on Speakerdeck"
+      >Death to Icon Fonts</a
+    >
+    - this talk made
+    <a
+      href="https://blog.github.com/2016-02-22-delivering-octicons-with-svg/"
+      title="Github on removing Icon Fonts"
+      >github change their site</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://speakerdeck.com/ninjanails/accessibility-is-more-than-just-supporting-screenreaders-2"
+      title="A11y is more than just supporting screenreaders on Speakerdeck"
+      >Accessibility is more than just supporting screenreaders</a
+    >
+  </li>
+</ul>
+</section><section>
+<h2>People to follow</h2>
+<p>
+  Want to learn more about a11y, then I recommend you follow, as a start, these
+  people on twitter:
+</p>
+<ul>
+  <li>
+    <a href="https://twitter.com/LeonieWatson" title="Léonie on Twitter"
+      >Léonie Watson</a
+    >
+  </li>
+  <li>
+    <a href="https://twitter.com/stevefaulkner" title="Steve on Twitter"
+      >Steve Faulkner</a
+    >
+  </li>
+  <li>
+    <a href="https://twitter.com/aardrian" title="Adrian on Twitter"
+      >Adrian Roselli</a
+    >
+  </li>
+  <li>
+    <a href="https://twitter.com/ninjanails" title="Adrian on Twitter"
+      >Seren Davies</a
+    >
+  </li>
+  <li>
+    <a href="https://twitter.com/laurakalbag" title="Laura on Twitter"
+      >Laura Kalbag</a
+    >
+  </li>
+</ul>
+</section>
