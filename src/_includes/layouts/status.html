@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %} 
+{% set pageHeaderTitle = title %}
+{% set pageSubTitle = sub_title %}
+{% block content %}
+{% include "partials/page-header.html" %}
+<article class="wide">
+    {{ content | safe }}
+    {% include "partials/cta-button.html" %}
+    {% include "partials/featured-posts.html" %}
+</article>
+
+
+{% endblock %}

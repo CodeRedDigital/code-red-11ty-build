@@ -785,7 +785,7 @@ summary + blockquote, summary + details, summary + dl, summary + figure:not([cla
 }
 
 /* cards */
-.cards, .cards .centered {
+.cards, .cards .centered, .wide .centered {
     max-width: 1280px;
 }
 
