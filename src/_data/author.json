@@ -1,0 +1,30 @@
+{
+    "name": "Dave Letorey",
+    "firstname": "Dave",
+    "lastname": "Letorey",
+    "roles": ["Director", "Front End Developer"],
+    "nationality": "British",
+    "location": "London, England",
+    "email": "dave@code-red.uk",
+    "avatar": "",
+    "pgp": "",
+    "codepen": "CodeRedDigital",
+    "github": "dletorey",
+    "lastfm": "dletorey",
+    "twitter": "dletorey",
+    "untappd": "dletorey",
+    "urls": {
+      "codepen": "https://codepen.io/CodeRedDigital",
+      "github": "https://github.com/dletorey",
+      "github_repo": "https://github.com/dletorey/letorey.co.uk",
+      "lastfm": "https://www.last.fm/user/dletorey",
+      "notist": "https://noti.st/dletorey",
+      "spotify": "https://open.spotify.com/user/dletorey",
+      "twitter": "https://twitter.com/dletorey",
+      "untappd": "https://untappd.com/user/dletorey"
+    },
+    "employer": {
+      "name": "Code Red",
+      "url": "https://code-red.uk"
+    }
+  }

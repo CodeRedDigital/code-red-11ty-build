@@ -1,0 +1,25 @@
+{
+    "name": "Code Red",
+    "companyNumber": "13003055",
+    "url": "code-red.uk",
+    "services": ["Web Development", "Consultancy", "Content Management", "Training", "Web Design"],
+    "location": "London, England",
+    "email": "hello@code-red.uk",
+    "avatar": "",
+    "pgp": "",
+    "codepen": "CodeRedDigital",
+    "github": "CodeRedDigital",
+    "instagram": "codereddigital",
+    "twitter": "CodeRedDigital",
+    "linkedin": "codereddigital",
+    "facebook": "CodeRedDigital",
+    "urls": {
+      "codepen": "https://codepen.io/CodeRedDigital",
+      "github": "https://github.com/dletorey",
+      "github_repo": "https://github.com/CodeRedDigital/code-red-11ty-build",
+      "instagram": "https://www.instagram.com/codereddigital/",
+      "twitter": "https://twitter.com/CodeRedDigital",
+      "linkedin": "https://www.linkedin.com/company/codereddigital",
+      "facebook": "https://www.facebook.com/CodeRedDigital"
+    }
+  }
