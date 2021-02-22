@@ -14,8 +14,15 @@
   {% set pageTitle = metaTitle %}
 {% endif %}
 
-{% if not socialImage %}
-    {% set socialImage = site.url + '/images/posts/default-post-image.jpg' %}
+{% if not socialImageFacebook %}
+    {% set socialImageFacebook = site.url + '/images/social/fb-og_image.png' %}
+    {% if not socialImageAlt %}
+    {% set socialImageAlt = 'Page image for' + site.name  %}
+    {% endif %}
+{% endif %}
+
+{% if not socialImageTwitter %}
+    {% set socialImageTwitter = site.url + '/images/social/tw-twitter_image.png' %}
 {% endif %}
 
 {% if not metaDesc %}
@@ -31,11 +38,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
 
-{% if socialImage %}
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="og:image" content="{{ socialImage }}" />
-<meta name="twitter:image" content="{{ socialImage }}" />
+{% if socialImageFacebook %}
+<meta property="og:image" content="{{ socialImageFacebook }}" />
 <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+{% endif %}
+
+{% if socialImageTwitter %}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ socialImageTwitter }}" />
 <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
 {% endif %}
 
