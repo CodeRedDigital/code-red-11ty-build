@@ -58,10 +58,13 @@
     --masala-20: rgba(67, 56, 56, 0.2); /* Masala #433838 */
 
     /* Font Weights */
+    --x-light: 100;
     --light: 200;
     --normal: 400;
     --heavy: 600;
-
+    --x-heavy: 750;
+    --xx-heavy: 900;
+    
     /* filters */
     --normal-drop-shadow: drop-shadow(0px 5px 10px rgba(11, 9, 9, 0.5));
     --large-drop-shadow: drop-shadow(0px 10px 20px rgba(11, 9, 9, 0.7));
@@ -697,8 +700,8 @@ h6, .six {
     color: var(--alabaster-colour);
     font-family: "Lucida Console", Monaco, monospace;
     font-family: var(--monospace);
-    font-weight: 600;
-    font-weight: var(--heavy);
+    font-weight: 900;
+    font-weight: var(--xx-heavy);
     font-size: 1.44rem;
     font-size: var(--s2);
     border-radius: 0 0 1.2rem 0;
