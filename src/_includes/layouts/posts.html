@@ -1,7 +1,9 @@
 {% extends "layouts/base.html" %} 
 {% set pageHeaderTitle = title %}
 {% set pageSubTitle = sub_title %}
+{% if showPageImage %}
 {% set pageImage = card.image %}
+{% endif %}
 {# Grab other posts that aren’t this one for the 'more from the blog' feed #}
 {% set recommendedPosts = helpers.getSiblingContent(collections.posts, page) %}
 {% block content %}
