@@ -1,0 +1,115 @@
+---
+title: 'I have a problem, an HTML problem'
+link: 'i-have-a-problem-an-html-problem'
+sub_title:
+date: '2021-02-23'
+tags: ['HTML', 'Accessibility', 'a11y', 'responsive']
+description: 'Hi my name is Dave and I am an HTML-aholic. Well it’s not really a problem, let me explain.'
+ph_colour: 'amber'
+first_post: ''
+featured: false
+social:
+    images:
+        twitter: '/images/posts/problem-twitter_image.png'
+        facebook:  '/images/posts/problem-og_image.png'
+    alt: 'Device displaying the blog post I have a problem'
+# card:
+#     image: '/images/posts/html-problem.jpg'
+#     imageAlt: ''
+sitemap:
+    exclude: false
+---
+<section>
+    <p>The term <em>HTML-aholic</em> was coined by <a href="https://twitter.com/brucel/" title="Bruce on Twitter">Bruce Lawson</a> during his talk “<a href="https://youtu.be/T2CjuAwrAq8?t=29" title="Watch Bruce's talk">Accessibility, Back to the Future</a>” at <a href="https://monkigras.com/" title="Monkigras Conference">Monkigras 2019</a>.</p>
+    <blockquote>I'm Bruce and I’m an HTML-aholic. … I've been an HTML-aholic for 20 years now. <cite><a href="https://www.brucelawson.co.uk/" title="Bruce’s site">Bruce Lawson</a> - Monkigras 2019</cite></blockquote>
+    <p>In my <a href="/ethos">ethos</a> my first point is HTML First, I hope this goes some way to explaining that.</p>
+</section>
+<section>
+    <h2>What is HTML</h2>
+    <p>HTML, or Hyper Text Markup Language, is the language of the World Wide Web.</p>
+    <p>Without HTML there would be no Social Media, there would be now online stores, there would be no Web.</p>
+    <p>In short HTML is the web.</p>
+</section>
+<section>
+    <h2>Why HTML first?</h2>
+    <p>Many of these modern platforms and sites are now built with JavaScript Libraries, so much so that Facebook built their own JavaScript Library called <a href="https://reactjs.org/" title="React JS Library">React</a>. All of these Libraries, though, in the end output HTML.</p>
+    <p>Done correctly using these Libraries is not an issue. Although done wrongly a user could just be left staring at a blank screen.</p>
+    <figure>
+        <img src="/images/posts/social-no-JavaScript.png" alt="Social networks with JavaScript disabled">
+        <figcaption>Facebook, Instagram and Twitter with JavaScript disabled</figcaption>
+    </figure>
+    <p>This is a terrible situation, if you are building sites with content, such as a blog, recipe site, a store. You want these things to be discovered.</p>
+    <p>A search engine or spider will crawl the web, that's why it's called a spider. When it does this it will look at the HTML on your site and the content within that HTML. It will <strong>not</strong> run any JavaScript that is on your site, that's not what it's looking for. So if the HTML and content on your site is built with JavaScript the spider will not discover it. This is the worst SEO you could possibly have <em>no content</em>.</p>
+    <p>This does not mean don’t use JavaScript, it means use JavaScript at the right time and for the right purpose, I shall write about this in the future.</p>
+</section>
+<section>
+    <h2>HTML has meaning</h2>
+    <p>In HTML there are things called elements, for example <code>&lt;p&gt;</code> represents a <em>paragraph</em> and <code>&lt;address&gt;</code> is use to display an address for a person or organisation. At the time of writing <abbr title="Mozilla Developer Network">MDN</abbr> says there are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">142 different HTML elements</a>.</p>
+    <p>Using the correct <em>element</em> tells the Browser, Search Engine, Assistive Technology (such as a screen reader), etc what the content really is, and giving it meaning.</p>
+    <p>These meanings are what we call semantics of the information on web pages or web applications. Without using these elements you would then need to teach the Browser, Search Engine, Assistive Technology, what various parts of your content are for.</p>
+    <p>If you look at the code (right click and select <em>View Source</em>) behind many of the largest you’d be forgiven for even realising that HTML has more than just <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements.</p>
+    <figure>
+        <img src="/images/posts/tweet-code.png" alt="Social networks with JavaScript disabled">
+        <figcaption>Some of the code behind a single tweet on twitter.com</figcaption>
+    </figure>
+    <p>In this example, from twitter, we can gain absolutely no meaning at all and would need to start explaining to the tools what each bit is for.</p>
+    <p>By the way a <code>&lt;div&gt;</code> element is a block-level generic element that has no meaning. A <code>&lt;span&gt;</code> element is a inline-level generic element that has no meaning.</p>
+    <p>Developers give them meaning by applying classes or ids, such as:</p>
+    <pre>&lt;div class="header"&gt;</pre>
+    <p>This is the whole reason <a href="https://en.wikipedia.org/wiki/HTML5" title="HTML5 entry on wikipedia">HTML5</a> was developed during 2004-2008.</p>
+    <h3>How HTML5 gives meaning</h3>
+    <pre>
+&lt;header&gt;
+    &lt;a href=".."&gt;
+      &lt;strong&gt;Code Red Digital&lt;/strong&gt;
+      &lt;time&gt;
+        Feb 23
+      &lt;/time&gt;
+    &lt;/a&gt;
+&lt;/header&gt;
+&lt;section&gt;
+    &lt;p&gt;Content of my tweet…&lt;/p&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+    Comment, Retweet, Like 
+&lt;/footer&gt;
+    </pre>
+    <p>Here I have simply refactored the code of a tweet to give it meaning, which means there is some basic understanding. WHat you can see here is:</p>
+    <ul>
+        <li>A <code>&lt;header&gt;</code> that contains the users name and date of the tweet</li>
+        <li>A <code>&lt;section&gt;</code> that contains the contents of the tweet</li>
+        <li>A <code>&lt;footer&gt;</code> that contains the comment, like and share functions</li>
+    </ul>
+    <p>All of these sections now have a meaning.</p>
+</section>
+<section>
+    <h2>HTML is Dumb/Smart</h2>
+    <h3>Why Dumb</h3>
+    <p>It is often said that HTML is a dumb language, what this means is that if a tool looking at the HTML code (such as a browser) doesn't understand it, it just moves on.</p>
+    <p>Although more importantly does not break.</p>
+    <h3>Why Smart</h3>
+    <p>Alternatively it is also said that HTML is a smart language.</p>
+    <p>If a developer misses something out in HTML, for example a closing tag, unlike most other programming languages it does not care and just carries on.</p>
+    <p>If a user is using an old device, or browser they have no control over and that browser does not recognise a new HTML element it just moves on. Pretty smart eh?</p>
+</section>
+<section>
+    <h2>HTML is Accessible</h2>
+    <p>Semantic HTML is accessible out of the box. For example if on our web page or web app we create a button, like so:</p>
+    <pre>&lt;button&gt;Click Me&lt;/button&gt;</pre>
+    <p>A screen-reader or other assitive technology will instantly know what it is and what it does.</p>
+    <p>If however we don't use semantics and create a button like this:</p>
+    <pre>&lt;div class="button"&gt;Click Me&lt;/div&gt;</pre>
+    <p>We then need to teach that assistive technology that this is a button and not some random HTML element.</p>
+    <p>I call this, <strong>Using the right tool for the right job</strong>. Creating a button from a <code>&lt;div&gt;</code> is like a builder using a screwdriver to cut a piece of wood.</p>
+</section>
+<section>
+    <h2>HTML is Responsive</h2>
+    <p>Again, out of the box, HTML is responsive. What this means is that the content of a  web page will flow to fit the size of the device displaying it.</p>
+    <p>It is only when we start adding CSS and sizes that we break that inherent responsiveness.</p>
+</section>
+<section>
+    <h2>Conclusion</h2>
+    <p>Many thought leaders in the web industry will say, build with Mobile first philosophy and then build up.</p> 
+    <p>I would take this further and build HTML First, there are still browsers out there that do not understand CSS and then build for mobile and then progressively add more features for more capable devices (this is called progressive enhancement, but I'll talk about that in a future post).</p>
+    <p>I also believe that the more that we use other new devices, such as smart speakers then HTML will again need to be front and center.</p>
+</section>
