@@ -1,4 +1,7 @@
 {% set pageTitle = title + ' | ' + site.name %}
+{% set socialImageFacebook = social.images.facebook %}
+{% set socialImageTwitter = social.images.twitter %}
+{% set socialImageAlt = social.alt %}
 
 {# We don't want any duplication. This is likely for the home page. #}
 {% if site.name === title %} 
@@ -40,7 +43,7 @@
 
 {% if socialImageFacebook %}
 <meta property="og:image" content="{{ socialImageFacebook }}" />
-<meta property="og:image:alt" content="Page image for {{ site.name }}" />
+<meta property="og:image:alt" content="{{ socialImageAlt }}" />
 {% endif %}
 
 {% if socialImageTwitter %}
@@ -48,7 +51,7 @@
 <meta name="twitter:site" content="@CodeRedDigital" />
 
 <meta name="twitter:image" content="{{ socialImageTwitter }}" />
-<meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+<meta name="twitter:image:alt" content="{{ socialImageAlt }}" />
 {% endif %}
 
 {% if metaDesc %}
