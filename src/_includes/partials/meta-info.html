@@ -1,7 +1,13 @@
 {% set pageTitle = title + ' | ' + site.name %}
-{% set socialImageFacebook = social.images.facebook %}
-{% set socialImageTwitter = social.images.twitter %}
+{% if social.image.facebook %}
+{% set socialImageFacebook = site.url + social.images.facebook %}
+{% endif %}
+{% if social.image.twitter %}
+{% set socialImageTwitter = site.url + social.images.twitter %}
+{% endif %}
+{% if social.alt %}
 {% set socialImageAlt = social.alt %}
+{% endif %}
 
 {# We don't want any duplication. This is likely for the home page. #}
 {% if site.name === title %} 
