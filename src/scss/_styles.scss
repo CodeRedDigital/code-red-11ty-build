@@ -164,7 +164,7 @@ main a {
    transition: all .2s ease;
 }
 
-main a:hover, .hovered {
+main a:hover, .hovered, main a:hover code {
     color: rgba(250, 249, 249, 1);
     color: var(--alabaster-colour);
     background-color: rgba(39, 111, 191, 1);
