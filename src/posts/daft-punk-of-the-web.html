@@ -1,0 +1,107 @@
+---
+title: 'Daft Punk of the Web'
+link: 'daft-punk-of-the-web'
+sub_title:
+date: '2021-02-25'
+tags: ['HTML', 'Accessibility', 'a11y', 'responsive']
+description: 'In the week that Daft Punk announced they were splitting up, I thought I’d tell you about the Daft Punk of Websites.'
+ph_colour: 'niagara'
+first_post: ''
+featured: true
+social:
+    images:
+        twitter: '/images/posts/daft-punk-twitter_image.png'
+        facebook:  '/images/posts/daft-punk-og_image.png'
+    alt: 'Device displaying lego daft punk mini-figures'
+card:
+    image: '/images/posts/daft-punk-og_image.png'
+    imageAlt: 'Device displaying lego daft punk mini-figures'
+sitemap:
+    exclude: false
+---
+<section>
+    <p>This week <a href="https://en.wikipedia.org/wiki/Daft_Punk" title="Daft Punk's wikipedia page">Daft Punk</a>, the French electronic music duo, announced that after 28 years in the music industry they were to split.</p>
+    <p>They did this via <a href="https://www.youtube.com/watch?v=DuDX6wNfjqc" title="Daft Punk's Epilogue video">a video called Epilogue</a> on their YouTube channel.</p>
+    <p>But how does Daft Punk relate to the Web?</p>
+</section>
+<section>
+    <h2>Robots rock</h2>
+    <p>Daft Punk, were commonly known via their Robot personas. Similarly websites also need a Robot to be discoverable.</p>
+    <p>To be more precise a <code>robots.txt</code>. This is a text file that lives at the root of a website that tells machines what to look for on  the site and what not to look for.</p>
+    <p>In this file we tell the bots of the web what they are <em>allowed</em> and <em>disallowed</em> from seeing or indexing (storing for them to display).</p>
+    <p>These bots are referred to as <strong>User-Agents</strong> and we can target all of them together with a wildcard <code>* (asterisk)</code>, or naming them individually.</p>
+    <p>Here is the <a href="/robots.txt">robots.txt</a> for this site, below I shall explain what is going on.</p>
+    <pre>
+User-agent: Twitterbot
+Allow: /images/
+
+User-agent: facebookexternalhit
+Allow: /images/
+
+User-agent: *
+Sitemap: https://code-red.uk/sitemap.xml
+Disallow: /images/
+    </pre>
+    <p>First of all I am telling the Twitter and Facebook's bot that it is OK to go ahead and look at all the files in the <code>/images/</code> folder.</p>
+    <p>Secondly I m using the <code>*</code> (wildcard) to target every bot and tell them where my <a href="/sitemap.xml"><code>sitemap.xml</code></a> is located. I then <code>Disallow</code> them all from indexing all files in the <code>/images/</code> folder</p>
+</section>
+<section>
+    <h2>Humans after all</h2>
+    <p>Daft Punk, were of course not robots, they were Humans after all. Just like websites are not created by robots they are created by humans.</p>
+    <p>We can add a <code>humans.txt</code> file to the root to show who are the real people that have worked on, contributed, help on a site.</p>
+    <p>While there is no requirement or standard for creating a <code>humans.txt</code>, <a href="http://humanstxt.org/">http://humanstxt.org/</a> has some guidelines on what you might include. For example:</p>
+    <ul>
+        <li>Team</li>
+        <li>Technologies</li>
+        <li>Thanks</li>
+    </ul>
+    <p>Some companies will use it to advertise jobs too.</p>
+    <p>Below you can see the <a href="/humans.txt">humans.txt</a> file for this site.</p>
+    <pre>
+# humanstxt.org
+/* OWNER & DEVELOPER */
+
+    Name:    Dave Letorey
+    Email:   dave@code-red.uk
+    GitHub:  https://github.com/dletorey
+    Twitter: https://twitter.com/dletorey
+
+/* SITE */
+
+    URL:           https://code-red.uk
+    Language:      en
+    Doctype:       HTML5
+    Fonts:         Helvetica Neue, Georgia, Lucida Console
+    Compiled with: Eleventy
+    IDE:           VS Code
+
+/* LANGUAGES */
+
+    HTML
+    CSS (SCSS)
+    JavaScript
+    JSON
+    Nunjucks
+    XML
+    YAML
+
+
+                                
+/* THANKS */
+            
+    CSS Skills: Chris Burnell
+    URL: https://chrisburnell.com 
+    Twitter: @iamchrisburnell
+
+    Eleventy From Scratch: Andy Bell
+    URL: https://piccalil.li
+    Course URL: https://piccalil.li/course/learn-eleventy-from-scratch
+    Twitter: @piccalilli_
+    </pre>
+</section>
+<section>
+    <h2>Conclusion</h2>
+    <p>Daft Punk were an amazing part of music history and there music has not gone away, they just won't be making anymore. I don't think this is that bad a thing as they'd been dormant for a while and perhaps now they will make more music on solo projects.</p> 
+    <p>In order to make your site discoverable, you'll need a <code>robots.txt</code> file.</p>
+    <p>In order to show appreciation for those working on your site you should include a <code>humans.txt</code> file.</p>
+</section>
