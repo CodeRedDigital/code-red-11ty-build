@@ -28,7 +28,7 @@ if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
        if (typeof dataText[i] == 'undefined'){
           setTimeout(function() {
             StartTextAnimation(0);
-          }, 10000);
+          }, 2800);
        }
        // check if dataText[i] exists
       if (i < dataText[i].length) {
