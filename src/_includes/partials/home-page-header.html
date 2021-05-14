@@ -1,0 +1,11 @@
+<section class="page-header {{ ph_colour }}" {% if pageImage %}style="background-image: url('{{ pageImage }}');"{% endif %}>
+    <div class="headings">
+        <h1><span id="type">{{ pageHeaderTitle }}</span><br>Websites</h1>
+        {% if pageSubTitle %}
+        <h2>{{ pageSubTitle }}</h2>
+        {% endif %}
+        {% if description %}
+        <p>{{ description }}</p>
+        {% endif %}
+    </div>
+</section>
