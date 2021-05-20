@@ -1,0 +1,44 @@
+---
+title: 'Money is not the only form of Reward'
+link: 'money-is-not-the-only-form-of-reward'
+sub_title:
+date: '2021-05-14T16:00:00Z'
+tags: ['Charity', 'Forms', 'Wordpress', 'Contact Form 7']
+description: 'In some down time this week, I helped out a local charity with a Foodbank referral form.'
+ph_colour: 'mariner'
+first_post: ''
+featured: true
+social:
+    images:
+        twitter: '/images/posts/daft-punk-twitter_image.png'
+        facebook:  '/images/posts/daft-punk-og_image.png'
+    alt: 'Device displaying lego daft punk mini-figures'
+card:
+    image: '/images/posts/daft-punk-og_image.png'
+    imageAlt: 'Device displaying lego daft punk mini-figures'
+sitemap:
+    exclude: false
+---
+<section>
+    <p>Last week I had some downtime from client work and my partner who is working for a local charity <a href="https://bonnydowns.org/">Bonny Downs Community Association (BDCA)</a> was experiencing some technical issues with a method of getting referrals to their Foodbank.</p>
+    <p>So we offered our services to help with this and build them an online form to solve this process.</p>
+</section>
+<section>
+    <h2>Solution</h2>
+    <p>So their Content Management System (CMS) is <a href="https://wordpress.org/">Wordpress</a>, which is an Open Source CMS that powers almost <a href="https://www.searchenginejournal.com/wordpress-powers-39-5-of-all-websites/391647">40% of all the websites in the world</a>. Although there was no form functionality in the CMS.</p>
+    <p>There are a number of <em>Form Plugins</em> for Wordpress. The requirements that I had for this were:</p>
+    <ul>
+        <li>Free, to save on extra expense</li>
+        <li>Full control of the code generated on the frontend</li>
+        <li>Simple to use and embed in a page</li>
+    </ul>
+    <h3>Contact Form 7</h3>
+    <p>The solution I opted for was <a href="https://contactform7.com/">Contact Form 7</a> as it met all the requirements, mostly.</p>
+    <p>It is not like many other form builders drag and drop, which can be easy for some users although you still need to know what you are dragging and dropping. It has fantastic documentation and gave me full control over the frontend HTML. this meant that I could make sure taht I was using the input elements that I wanted and make sure the from was easy to use and accessible.</p>
+    <p>The only downside to Contact Form 7 is that it does not store the form submission in the Wordpress Database. This may not be an issue if you just want the form to send emails. If however you do want to collect the data, then there is another plugin for use with Contact Form 7 that does exactly that, called <a href="https://contactform7.com/save-submitted-messages-with-flamingo/">Flamingo</a>.</p>
+    <p>You can see the code I used to build the form on my github account.</p>
+    <ul>
+        <li><a href="https://github.com/CodeRedDigital/Bonny-Downs-Food-Bank-Referral/blob/main/Forms/food-bank-referral.html">Contact Form</a></li>
+        <li><a href="https://github.com/CodeRedDigital/Bonny-Downs-Food-Bank-Referral/blob/main/Forms/message-body.html">Email content</a></li>
+    </ul>
+</section>
