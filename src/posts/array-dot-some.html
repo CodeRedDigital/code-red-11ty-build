@@ -1,0 +1,99 @@
+---
+title: 'Array.some()'
+link: 'array-dot-some'
+sub_title: 'method of the day'
+date: '2021-09-28T16:00:00Z'
+tags: ['JavaScript', 'Arrays', 'Methods', 'Lists', 'Web Development']
+description: 'An array is a list of things in programming languages, in JavaScript a method is something that you can do to an array. Today I am focussing on the .some() method.'
+ph_colour: 'niagara'
+first_post: ''
+featured: true
+social:
+    images:
+        twitter: '/images/posts/arrays-twitter_image.png'
+        facebook:  '/images/posts/arrays-og_image.png'
+    alt: 'a simple array of numbers and an array of objects'
+card:
+    image: '/images/posts/arrays-og_image.png'
+    imageAlt: 'a simple array of numbers and an array of objects'
+sitemap:
+    exclude: false
+---
+<section>
+  <p>As I learn more and more about JavaScript I realise that there is more and more that I don't know.</p>
+  <p>Although I have realised that a great deal of what I am doing with JavaScript is examining data and doing stuff with that data.</p>
+  <p>A great deal of that data is a list of things or an array.</p>
+  <p>In JavaScript there are Methods, which are prebuilt bits of code for working with data, whether that data be:</p>
+  <ul>
+    <li>Strings - words and numbers for example a person's name</li>
+    <li>Numbers - for example the cost of something</li>
+    <li>Boolean - true or false value for example an option is selected or not</li>
+    <li>Array - a list of things for example a list of peoples names.</li>
+    <li>Object -  a complex bit of related data for example a person, their first/last names, age, date of birth, etc.</li>
+  </ul>
+  <p> An array can be a list of strings, numbers, booleans, arrays, objects or a mixture of all of these.</p>
+</section>
+<section>
+  <h2>Array.some()</h2>
+  <p>This method allows you to check that a value appears in an array and will return <code>true</code> or <code>false</code>.</p>
+  <p>Here I have a simple array of numbers.</p>
+  <pre>
+let simpleArray = [1, 2, 3, 4, 5, 6]
+  </pre>
+  <p>I can use the <code>.some()</code> method to check if a value appears in the array.</p>
+  <pre>
+simpleArray.some(2)
+// returns true as 2 is in the array
+simpleArray.some(7)
+// returns false as 7 is not in the array
+  </pre>
+  <h3>Is a value in an Object in an array</h3>
+  <p>Real life is usually a little more complex so let me explain why I am using this to give more context</p>
+  <h4>Use Case</h4>
+  <p>I have an id which I have got from the url:</p>
+  <p><code>https://mysite.com/user/<strong>abc123</strong></code> id = abc123</p>
+  <p>I have an array of users, my data:</p>
+  <pre>
+const users = [
+  {
+    id: "abc123",
+    name: "Dave",
+    age: 52
+  },
+  {
+    id: "def456",
+    name: "Tom",
+    age: 36
+  },
+  {
+    id: "ghi789",
+    name: "Dick",
+    age: 27
+  }
+]
+  </pre>
+  <p>Now I want to check to see if the id appears in the users array</p>
+  <h4>Solution</h4>
+  <pre>
+users.some(user => user.id.includes(id))
+  </pre>
+  <p>This uses the <code>.some()</code> method and inside we have an arrow function that breaks each object in the array into a user.</p>
+  <p>Then it looks in that user of an <code>id</code> and then uses the <code>.includes()</code> string method to see if the <code>id</code> I got from the url is in the current user object that is being inspected.</p>
+  <h4>How I am using this</h4>
+  <p>So I am checking to see if the user exists in my array and if it is I am loading that into the page, if not I make an <code>API</code> call to get the user.</p>
+  <pre>
+if (users.some(user => user.id.includes(id))) {
+  // load the user into the page
+} else {
+  // call function to get the user
+  getUser(id);
+  // load user into the page
+}
+  </pre>
+  <h3>Further reading</h3>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some"><code>.some()</code> array method MDN</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes"><code>.includes()</code> string method MDN</a></li>
+    <li><a href="https://caniuse.com/mdn-javascript_builtins_array_some"><code>.some()</code> array method can I use</a></li>
+    <li><a href="https://caniuse.com/es6-string-includes"><code>.includes()</code> string method can I use</a></li>
+  </ul>
