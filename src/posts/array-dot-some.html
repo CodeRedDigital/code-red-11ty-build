@@ -78,7 +78,7 @@ const users = [
 users.some(user => user.id.includes(id))
   </pre>
   <p>This uses the <code>.some()</code> method and inside we have an arrow function that breaks each object in the array into a user.</p>
-  <p>Then it looks in that user of an <code>id</code> and then uses the <code>.includes()</code> string method to see if the <code>id</code> I got from the url is in the current user object that is being inspected.</p>
+  <p>Then it looks in that user for an <code>id</code> (or <code>object key</code>) and then uses the <code>.includes()</code> string method to see if the <code>id</code> I got from the url is in the current user object that is being inspected.</p>
   <h4>How I am using this</h4>
   <p>So I am checking to see if the user exists in my array and if it is I am loading that into the page, if not I make an <code>API</code> call to get the user.</p>
   <pre>
